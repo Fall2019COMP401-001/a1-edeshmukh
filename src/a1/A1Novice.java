@@ -32,7 +32,8 @@ public class A1Novice {
 				sum = sum + (quantity * price);
 			}
 			
-			System.out.println(first.substring(0, 1) + ". " + last + ": " + sum);
+			String answer = String.format("%,.2f",sum);
+			System.out.println(first.substring(0, 1) + ". " + last + ": " + answer);
 		}
 		
 	
