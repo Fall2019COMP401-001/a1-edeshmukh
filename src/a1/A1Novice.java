@@ -16,7 +16,7 @@ public class A1Novice {
 
 		int count = scan.nextInt();
 
-		
+		// getting names of customers and how much they bought
 		for (int i = 0; i < count; i++) {
 			String first = scan.next();
 			String last = scan.next();
@@ -24,6 +24,7 @@ public class A1Novice {
 			
 			double sum = 0; 
 			
+			// calculating bill for each customer
 			for (int j = 0; j < items; j++) {
 				int quantity = scan.nextInt();
 				String name = scan.next();

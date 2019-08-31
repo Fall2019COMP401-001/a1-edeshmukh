@@ -17,6 +17,7 @@ public class A1Adept {
 		String itemName[] = new String[storeItems];
 		Double itemPrice[] = new Double[storeItems];
 		
+		// getting names and prices of items
 		for(int i = 0; i < storeItems; i++) {
 			itemName[i] = scan.next();
 			itemPrice[i] = scan.nextDouble();
@@ -27,16 +28,19 @@ public class A1Adept {
 		Double customerTotal[] = new Double[customerNum];
 		
 		for(int i = 0; i < customerNum; i++) {
+			// getting name of each customer and how many items they bought
 			String first = scan.next();
 			String last = scan.next();
 			customers[i] = first + " " + last;
 			double total = 0;
 			int itemsNumber = scan.nextInt();
 			
+			// getting how much of each item they bought
 			for(int j = 0; j < itemsNumber; j++) {
 				int item_num = scan.nextInt();
 				String item = scan.next();
 				
+				// getting prices of items and calculating total 
 				for(int x = 0; x < storeItems; x++) {
 					if(item.contentEquals(itemName[x])) {
 						double price = itemPrice[x];
@@ -71,6 +75,7 @@ public class A1Adept {
 		String secondAnswer = String.format("%,.2f",customerTotal[minCount]);
 		String thirdAnswer = String.format("%,.2f",average);
 		
+		// printing out answers
 		System.out.println("Biggest: " + customers[maxCount] + " (" + firstAnswer + ")" );
 		System.out.println("Smallest: " + customers[minCount] + " (" + secondAnswer + ")" );
 		System.out.println("Average: " + thirdAnswer);
