@@ -42,7 +42,7 @@ public class A1Adept {
 				
 				// getting prices of items and calculating total 
 				for(int x = 0; x < storeItems; x++) {
-					if(item.contentEquals(itemName[x])) {
+					if(item.equals(itemName[x])) {
 						double price = itemPrice[x];
 						price = price * item_num;
 						total = total + price;
@@ -58,7 +58,7 @@ public class A1Adept {
 		double min = customerTotal[0];
 		double grandTotal = customerTotal[0];
 		
-		for(int y = 0; y < customerNum; y++) {
+		for(int y = 1; y < customerNum; y++) {
 			if(customerTotal[y] > max) {
 				max = customerTotal[y];
 				maxCount = y;
